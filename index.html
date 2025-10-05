@@ -15,6 +15,27 @@
             content="podcast, violences, témoignages, racisme, sexisme, patriarcat, capitalisme, oppression, vécu, intime"
         />
 
+        <!-- Favicons -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./public/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./public/favicon-16x16.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./public/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="./public/site.webmanifest" />
+        <meta name="theme-color" content="#9333ea" />
+
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://cequonneditpas.fr/" />
@@ -25,7 +46,7 @@
         />
         <meta
             property="og:image"
-            content="https://cequonneditpas.fr/og-image.jpg"
+            content="https://cequonneditpas.fr/public/og-image.jpg"
         />
 
         <!-- Twitter -->
@@ -263,114 +284,62 @@
             id="voix"
             class="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-purple-900/30 to-pink-900/30"
         >
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2
                     class="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center font-display"
                 >
                     Les voix qui portent le podcast
                 </h2>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+                <div class="space-y-6">
                     <!-- Extrait Ana 1 -->
-                    <div
-                        class="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6 sm:p-8 border-l-4 border-purple-400 hover:shadow-xl transition-all duration-300"
-                    >
-                        <blockquote>
-                            <p
-                                class="text-lg sm:text-xl md:text-2xl font-light text-gray-200 font-display italic leading-relaxed mb-4"
-                            >
-                                « Je suis une femme de classe moyenne supérieure
-                                et je suis handicapée, mais j'ai un handicap
-                                invisible. Tellement invisible qu'il a été
-                                invisible pour moi pendant des années. »
-                            </p>
-                            <footer
-                                class="text-gray-400 text-sm uppercase tracking-wider"
-                            >
-                                — Ana, sur l'invisibilité du handicap
-                            </footer>
-                        </blockquote>
+                    <div class="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6">
+                        <p class="text-lg sm:text-xl text-gray-200 mb-3 font-display">
+                            « Je suis une femme de classe moyenne supérieure et je suis handicapée, mais j'ai un handicap invisible. Tellement invisible qu'il a été invisible pour moi pendant des années. »
+                        </p>
+                        <footer class="text-purple-400 text-sm font-semibold">
+                            — Ana, sur l'invisibilité du handicap
+                        </footer>
                     </div>
 
                     <!-- Extrait Lune 1 -->
-                    <div
-                        class="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6 sm:p-8 border-l-4 border-pink-400 hover:shadow-xl transition-all duration-300"
-                    >
-                        <blockquote>
-                            <p
-                                class="text-lg sm:text-xl md:text-2xl font-light text-gray-200 font-display italic leading-relaxed mb-4"
-                            >
-                                « Pourquoi le monde semble me faire tellement
-                                violence alors que les autres y arrivent à vivre
-                                dans ce monde ? »
-                            </p>
-                            <footer
-                                class="text-gray-400 text-sm uppercase tracking-wider"
-                            >
-                                — Lune, sur sa place dans ce monde
-                            </footer>
-                        </blockquote>
+                    <div class="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6">
+                        <p class="text-lg sm:text-xl text-gray-200 mb-3 font-display">
+                            « Pourquoi le monde semble me faire tellement violence alors que les autres y arrivent à vivre dans ce monde ? »
+                        </p>
+                        <footer class="text-pink-400 text-sm font-semibold">
+                            — Lune, sur sa place dans ce monde
+                        </footer>
                     </div>
 
-                    <!-- Extrait Ana 3 -->
-                    <div
-                        class="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6 sm:p-8 border-l-4 border-purple-400 hover:shadow-xl transition-all duration-300"
-                    >
-                        <blockquote>
-                            <p
-                                class="text-lg sm:text-xl md:text-2xl font-light text-gray-200 font-display italic leading-relaxed mb-4"
-                            >
-                                « Je suis reconnaissante. Mais maintenant je
-                                crois que je serais un peu vénère si on
-                                n'essayait pas de respecter mes besoins. »
-                            </p>
-                            <footer
-                                class="text-gray-400 text-sm uppercase tracking-wider"
-                            >
-                                — Ana, sur la reconnaissance de ses droits
-                            </footer>
-                        </blockquote>
+                    <!-- Extrait Ana 2 -->
+                    <div class="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6">
+                        <p class="text-lg sm:text-xl text-gray-200 mb-3 font-display">
+                            « Je suis reconnaissante. Mais maintenant je crois que je serais un peu vénère si on n'essayait pas de respecter mes besoins. »
+                        </p>
+                        <footer class="text-purple-400 text-sm font-semibold">
+                            — Ana, sur la reconnaissance de ses droits
+                        </footer>
                     </div>
 
                     <!-- Extrait Lune 2 -->
-                    <div
-                        class="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6 sm:p-8 border-l-4 border-pink-400 hover:shadow-xl transition-all duration-300"
-                    >
-                        <blockquote>
-                            <p
-                                class="text-lg sm:text-xl md:text-2xl font-light text-gray-200 font-display italic leading-relaxed mb-4"
-                            >
-                                « J'ai vécu un certain nombre de violences qu'on
-                                peut appeler violences conjugales. [...] En même
-                                temps, j'étais aussi exposé aux récits de
-                                violence de la personne en question. »
-                            </p>
-                            <footer
-                                class="text-gray-400 text-sm uppercase tracking-wider"
-                            >
-                                — Lune, sur la chaîne des violences
-                            </footer>
-                        </blockquote>
+                    <div class="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6">
+                        <p class="text-lg sm:text-xl text-gray-200 mb-3 font-display">
+                            « J'ai vécu un certain nombre de violences qu'on peut appeler violences conjugales. [...] En même temps, j'étais aussi exposé aux récits de violence de la personne en question. »
+                        </p>
+                        <footer class="text-pink-400 text-sm font-semibold">
+                            — Lune, sur la chaîne des violences
+                        </footer>
                     </div>
 
-                    <!-- Extrait Ana 4 -->
-                    <div
-                        class="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6 sm:p-8 border-l-4 border-purple-400 hover:shadow-xl transition-all duration-300"
-                    >
-                        <blockquote>
-                            <p
-                                class="text-lg sm:text-xl md:text-2xl font-light text-gray-200 font-display italic leading-relaxed mb-4"
-                            >
-                                « J'ai honte d'avoir honte de mes privilèges.
-                                Mais c'est difficile de se plaindre quand on a
-                                eu de la chance sans même l'avoir demandé. »
-                            </p>
-                            <footer
-                                class="text-gray-400 text-sm uppercase tracking-wider"
-                            >
-                                — Ana, sur le poids du privilège
-                            </footer>
-                        </blockquote>
+                    <!-- Extrait Ana 3 -->
+                    <div class="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6">
+                        <p class="text-lg sm:text-xl text-gray-200 mb-3 font-display">
+                            « J'ai honte d'avoir honte de mes privilèges. Mais c'est difficile de se plaindre quand on a eu de la chance sans même l'avoir demandé. »
+                        </p>
+                        <footer class="text-purple-400 text-sm font-semibold">
+                            — Ana, sur le poids du privilège
+                        </footer>
                     </div>
                 </div>
             </div>
