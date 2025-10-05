@@ -1,1568 +1,342 @@
-<!DOCTYPE html>
-<html lang="fr-FR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Atelier de Consentement Strasbourg - Merci pour ton non</title>
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Ce qu'on ne dit pas - Podcast sur les violences et les vécus intimes
+        </title>
+        <meta
+            name="description"
+            content="Un podcast qui donne la parole aux personnes ayant vécu ou commis des violences. Un espace bienveillant pour comprendre les systèmes d'oppression à travers les témoignages intimes."
+        />
+        <meta
+            name="keywords"
+            content="podcast, violences, témoignages, racisme, sexisme, patriarcat, capitalisme, oppression, vécu, intime"
+        />
 
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="./output.css" as="style">
-    <link rel="preload" href="./assets/atelier_consentement.jpg" as="image">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://cequonneditpas.fr/" />
+        <meta property="og:title" content="Ce qu'on ne dit pas - Podcast" />
+        <meta
+            property="og:description"
+            content="Un podcast qui donne la parole aux personnes ayant vécu ou commis des violences. Un espace bienveillant pour comprendre les systèmes d'oppression."
+        />
+        <meta
+            property="og:image"
+            content="https://cequonneditpas.fr/og-image.jpg"
+        />
 
-    <!-- Standard Meta Tags -->
-    <meta
-      name="description"
-      content="Atelier de consentement à prix libre à Strasbourg. 3h pour apprendre à dire non et poser ses limites. Participation libre. Inscriptions ouvertes !"
-    />
-    <meta
-      name="keywords"
-      content="atelier consentement, atelier consentement strasbourg, formation consentement, apprendre dire non, poser limites, merci pour ton non, atelier prix libre strasbourg, culture consentement"
-    />
-    <meta name="author" content="Merci pour ton non" />
-    <meta name="robots" content="index, follow" />
-    <meta name="language" content="fr-FR" />
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://cequonneditpas.fr/" />
+        <meta
+            property="twitter:title"
+            content="Ce qu'on ne dit pas - Podcast"
+        />
+        <meta
+            property="twitter:description"
+            content="Un podcast qui donne la parole aux personnes ayant vécu ou commis des violences."
+        />
 
-    <!-- Open Graph Meta Tags (Facebook, LinkedIn, WhatsApp) -->
-    <meta
-      property="og:title"
-      content="Atelier de Consentement à Prix Libre à Strasbourg | Merci pour ton non"
-    />
-    <meta
-      property="og:description"
-      content="Atelier de consentement de 3h à Strasbourg. Apprends à dire non, pose tes limites. Formation à prix libre sur la culture du consentement. Inscris-toi !"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://mercipourtonnon.fr" />
-    <meta
-      property="og:image"
-      content="https://mercipourtonnon.fr/assets/atelier_consentement.jpg"
-    />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:site_name" content="Merci pour ton non" />
-    <meta property="og:locale" content="fr-FR" />
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
 
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Atelier de Consentement Strasbourg | Formation à Prix Libre"
-    />
-    <meta
-      name="twitter:description"
-      content="Atelier de consentement à prix libre à Strasbourg. 3h de formation pratique pour apprendre à dire non et créer des relations saines. Par Merci pour ton non."
-    />
-    <meta
-      name="twitter:image"
-      content="https://mercipourtonnon.fr/assets/atelier_consentement.jpg"
-    />
-    <meta
-      name="twitter:image:alt"
-      content="Atelier sur le consentement - Merci pour ton non"
-    />
-    <meta name="twitter:site" content="@mercipourtonnon" />
-    <meta name="twitter:creator" content="@mercipourtonnon" />
-
-    <!-- Additional Social Media Tags -->
-    <meta property="article:author" content="Merci pour ton non" />
-    <meta property="article:publisher" content="https://mercipourtonnon.fr" />
-
-    <!-- Schema.org Markup for Google -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Merci pour ton non",
-        "description": "Organisation d'ateliers de consentement à prix libre à Strasbourg. Formation pratique pour apprendre à dire non et développer des relations saines.",
-        "url": "https://mercipourtonnon.fr",
-        "logo": "https://mercipourtonnon.fr/assets/atelier_consentement.jpg",
-        "sameAs": [
-          "https://www.instagram.com/mercipourtonnon/",
-          "https://www.facebook.com/mercipourtonnon",
-          "https://www.linkedin.com/company/merci-pour-ton-non"
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Strasbourg",
-          "addressCountry": "FR"
-        },
-        "event": {
-          "@type": "EducationEvent",
-          "name": "Atelier découverte : Le consentement dans toutes ses dimensions",
-          "description": "Atelier interactif de 3 heures pour explorer ensemble les différentes facettes du consentement",
-          "startDate": "2025-09-21T10:00:00+02:00",
-          "endDate": "2025-09-21T13:00:00+02:00",
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "eventStatus": "https://schema.org/EventScheduled",
-          "location": {
-            "@type": "Place",
-            "name": "Strasbourg",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Strasbourg",
-              "addressCountry": "FR"
-            }
-          },
-          "organizer": {
-            "@type": "Organization",
-            "name": "Merci pour ton non",
-            "url": "https://mercipourtonnon.fr"
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "EUR",
-            "availability": "https://schema.org/InStock",
-            "url": "https://www.billetweb.fr/multi_event.php?multi=43090",
-            "description": "Prix libre - Personne n'est refusé·e par manque d'argent"
-          },
-          "maximumAttendeeCapacity": 15,
-          "minimumAttendeeCapacity": 6
-        }
-      }
-    </script>
-
-    <!-- Theme Color for Mobile Browsers -->
-    <meta name="theme-color" content="#F97316" />
-    <meta name="msapplication-navbutton-color" content="#F97316" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="#F97316" />
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://mercipourtonnon.fr" />
-
-    <link href="./output.css" rel="stylesheet" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./assets/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-
-      * {
-        font-family: "Inter", sans-serif;
-      }
-
-      .title-font {
-        font-family: "Bebas Neue", cursive;
-        letter-spacing: 0.05em;
-      }
-
-      .hero-title {
-        animation: fadeInUp 0.8s ease-out;
-      }
-
-      .fade-in {
-        animation: fadeIn 1s ease-out;
-      }
-
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      .hover-lift {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .hover-lift:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-      }
-
-      .gradient-text {
-        background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      .pill-header {
-        background: #f97316;
-        border-radius: 50px;
-        padding: 0.75rem 2rem;
-        display: inline-block;
-        color: white;
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-      }
-
-      .pill-purple {
-        background: #a855f7;
-      }
-
-      .blob {
-        position: absolute;
-        border-radius: 50%;
-        filter: blur(40px);
-        opacity: 0.3;
-        animation: float 20s infinite;
-      }
-
-      @keyframes float {
-        0%,
-        100% {
-          transform: translate(0, 0) scale(1);
-        }
-        33% {
-          transform: translate(30px, -30px) scale(1.1);
-        }
-        66% {
-          transform: translate(-20px, 20px) scale(0.9);
-        }
-      }
-
-      .transition-text {
-        background: linear-gradient(135deg, #f97316 0%, #a855f7 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 600;
-        font-size: 1.125rem;
-        margin: 2rem 0;
-        text-align: center;
-      }
-    </style>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPTGNRZSP6"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-KPTGNRZSP6');
-    </script>
-  </head>
-  <body>
-    <!-- Urgency Banner -->
-    <div
-      class="bg-gradient-to-r from-orange-600 to-purple-600 text-white py-2 text-center relative"
+        <link rel="stylesheet" href="output.css" />
+        <link rel="canonical" href="https://cequonneditpas.fr/" />
+    </head>
+    <body
+        class="bg-gradient-to-br from-gray-900 to-gray-800 text-gray-100 min-h-screen font-body"
     >
-      <p class="text-sm font-semibold">
-        🔥 Prochaine session le 21 septembre !
-        <a href="#events" class="underline font-bold ml-2">Je m'inscris →</a>
-      </p>
-    </div>
-
-    <div
-      class="min-h-screen bg-gradient-to-br from-orange-50 to-purple-50 relative overflow-hidden"
-    >
-      <!-- Animated background blobs -->
-      <div class="blob w-96 h-96 bg-orange-300 top-0 left-0"></div>
-      <div class="blob w-80 h-80 bg-purple-300 bottom-0 right-0"></div>
-
-      <!-- Navigation -->
-      <nav
-        class="relative z-10 bg-white bg-opacity-90 backdrop-blur-sm sticky top-0 shadow-lg"
-      >
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
-          <div class="flex justify-between items-center">
-            <div class="text-lg sm:text-xl lg:text-2xl font-black text-orange-500 title-font">
-              Merci pour ton non
-            </div>
-
-            <!-- Desktop Navigation -->
-            <div class="hidden lg:flex items-center gap-8">
-              <div class="flex space-x-6 items-center">
-                <a
-                  href="#atelier"
-                  class="text-gray-700 hover:text-orange-500 font-medium transition text-sm"
-                  >L'atelier</a
-                >
-                <a
-                  href="#temoignages"
-                  class="text-gray-700 hover:text-orange-500 font-medium transition text-sm"
-                  >Témoignages</a
-                >
-                <a
-                  href="#mission"
-                  class="text-gray-700 hover:text-orange-500 font-medium transition text-sm"
-                  >Notre mission</a
-                >
-                <a
-                  href="#valeurs"
-                  class="text-gray-700 hover:text-orange-500 font-medium transition text-sm"
-                  >Nos valeurs</a
-                >
-                <a
-                  href="#equipe"
-                  class="text-gray-700 hover:text-orange-500 font-medium transition text-sm"
-                  >L'équipe</a
-                >
-                <a
-                  href="#faq"
-                  class="text-gray-700 hover:text-orange-500 font-medium transition text-sm"
-                  >FAQ</a
-                >
-              </div>
-
-              <!-- CTA in Desktop Navigation -->
-              <a
-                href="#events"
-                class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-4 py-2 rounded-full font-semibold text-sm hover:scale-105 transition-transform duration-300"
-              >
-                <span>S'inscrire</span>
-              </a>
-
-              <!-- Social Media Icons in Desktop Header -->
-              <div class="flex items-center space-x-3">
-                <a
-                  href="https://www.instagram.com/mercipourtonnon/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-gray-600 hover:text-orange-500 transition"
-                  aria-label="Instagram"
-                >
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12c0 3.403 2.759 6.162 6.162 6.162s6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162-6.162 2.759-6.162 6.162zm8.162 0c0 1.105-.895 2-2 2s-2-.895-2-2 .895-2 2-2 2 .895 2 2zm4.207-6.374c0 .794-.645 1.44-1.44 1.44s-1.44-.646-1.44-1.44.646-1.439 1.44-1.439 1.44.645 1.44 1.439z"
-                    />
-                  </svg>
-                </a>
-
-                <a
-                  href="https://www.facebook.com/mercipourtonnon"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-gray-600 hover:text-blue-600 transition"
-                  aria-label="Facebook"
-                >
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-                    />
-                  </svg>
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/company/merci-pour-ton-non"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-gray-600 hover:text-blue-700 transition"
-                  aria-label="LinkedIn"
-                >
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                    />
-                  </svg>
-                </a>
-
-                <a
-                  href="https://www.billetweb.fr/pro/mercipourtonnon"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-gray-600 hover:text-orange-500 transition"
-                  aria-label="Billetterie"
-                >
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M20 12c0-1.1.9-2 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-1.99.9-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2zm-4.42 4.8L12 14.5l-3.58 2.3 1.08-4.12-3.29-2.69 4.24-.25L12 5.8l1.54 3.95 4.24.25-3.29 2.69 1.09 4.11z"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- Mobile/Tablet Menu Button -->
-            <button
-              id="mobile-menu-button"
-              class="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition"
-              aria-label="Menu"
-              aria-expanded="false"
+        <!-- Hero Section -->
+        <header class="relative overflow-hidden">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div
+                class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32"
             >
-              <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </nav>
+                <div class="text-center">
+                    <h1
+                        class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 py-2 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-display leading-tight"
+                    >
+                        Ce qu'on ne dit pas
+                    </h1>
+                    <p
+                        class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+                    >
+                        Un podcast qui libère la parole sur les violences vécues
+                        et commises
+                    </p>
+                </div>
+            </div>
+        </header>
 
-      <!-- Mobile/Tablet Sidebar Menu -->
-      <div
-        id="mobile-menu"
-        class="fixed inset-0 z-50 hidden"
-      >
-        <!-- Overlay -->
-        <div
-          id="menu-overlay"
-          class="fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity"
-        ></div>
+        <!-- Introduction -->
+        <section class="py-16 md:py-20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div
+                    class="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-2xl"
+                >
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center font-display">
+                        Notre démarche
+                    </h2>
+                    <div class="space-y-6 text-lg leading-relaxed">
+                        <p>
+                            <span class="font-semibold text-purple-400"
+                                >Ce qu'on ne dit pas</span
+                            >
+                            est un podcast en cours de création qui se concentre
+                            sur les violences dans notre société - qu'elles
+                            soient commises ou subies.
+                        </p>
+                        <p>
+                            Nous explorons les systèmes d'oppression dans toute
+                            leur complexité : racisme, sexisme, patriarcat,
+                            capitalisme, violences familiales, religieuses et
+                            institutionnelles. Les luttes et les résistances qui
+                            en découlent.
+                        </p>
+                        <p>
+                            Ce qui nous distingue, c'est notre approche :
+                            <span class="font-semibold"
+                                >nous ne parlons que de vécu et de ressenti,
+                                jamais d'opinion</span
+                            >. L'intime et l'expérience individuelle sont au
+                            coeur de chaque épisode.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- Sidebar -->
-        <div
-          id="menu-sidebar"
-          class="fixed left-0 top-0 h-screen w-80 max-w-[85%] bg-white shadow-xl transform -translate-x-full transition-transform duration-300 flex flex-col"
+
+        <!-- Notre Vision -->
+        <section class="py-16 md:py-20">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center font-display">
+                    Notre conviction
+                </h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div
+                        class="bg-purple-900 bg-opacity-30 rounded-xl p-6 border border-purple-500 border-opacity-20 hover:shadow-lg transition-all duration-300"
+                    >
+                        <div class="text-4xl mb-4">🌱</div>
+                        <h3 class="text-xl font-semibold mb-3 text-purple-300">
+                            On ne naît pas violent
+                        </h3>
+                        <p class="text-gray-300">
+                            La violence n'est pas innée. Elle est le produit de
+                            notre environnement, de ce que nous avons vécu et
+                            subi.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-purple-900 bg-opacity-30 rounded-xl p-6 border border-purple-500 border-opacity-20 hover:shadow-lg transition-all duration-300"
+                    >
+                        <div class="text-4xl mb-4">💬</div>
+                        <h3 class="text-xl font-semibold mb-3 text-purple-300">
+                            Visibiliser pour comprendre
+                        </h3>
+                        <p class="text-gray-300">
+                            En donnant la parole aux personnes concernées, nous
+                            rendons visible l'invisible et créons un espace de
+                            compréhension.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-purple-900 bg-opacity-30 rounded-xl p-6 border border-purple-500 border-opacity-20 hover:shadow-lg transition-all duration-300"
+                    >
+                        <div class="text-4xl mb-4">🤝</div>
+                        <h3 class="text-xl font-semibold mb-3 text-purple-300">
+                            Accueillir et prendre soin
+                        </h3>
+                        <p class="text-gray-300">
+                            Créer un espace bienveillant pour accueillir les
+                            vécus et réfléchir ensemble à comment prendre soin
+                            des conséquences.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- À propos de l'auteur -->
+        <section class="py-16 md:py-20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div
+                    class="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-2xl"
+                >
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center font-display">
+                        Qui est l'auteur ?
+                    </h2>
+                    <div class="space-y-6 text-lg leading-relaxed">
+                        <p>
+                            Je suis un homme blanc, cisgenre, hétéro, issu de la
+                            classe sociale professionnelle supérieure -
+                            autrement dit,
+                            <span class="font-semibold text-purple-400"
+                                >je cumule les privilèges</span
+                            >
+                            dans notre société.
+                        </p>
+                        <p>
+                            J'ai été auteur de violences envers des personnes
+                            sexisées. Cette réalité fait partie de mon histoire
+                            et c'est en la reconnaissant que j'ai pu entamer un
+                            processus de déconstruction profond.
+                        </p>
+                        <p>
+                            <span class="font-semibold text-purple-400"
+                                >Je suis infiniment reconnaissant</span
+                            >
+                            envers toutes les personnes sexisées et victimes
+                            d'oppressions qui ont pris le temps, l'énergie et le
+                            courage de me confronter à mes comportements, de
+                            m'éduquer et de m'accompagner dans ma remise en
+                            question. Sans elles, sans leur patience et leur
+                            travail pédagogique - qu'elles n'auraient jamais dû
+                            avoir à fournir - je n'aurais pas pu accélérer mon
+                            travail de déconstruction.
+                        </p>
+                        <p>
+                            Aujourd'hui, je suis engagé dans une démarche
+                            continue pour comprendre les oppressions systémiques
+                            qui structurent notre société. Je cherche à
+                            approfondir ma compréhension des mécanismes de
+                            domination et à réfléchir collectivement à comment
+                            nous pouvons en sortir.
+                        </p>
+                        <p>
+                            Ce podcast est né de cette volonté :
+                            <span class="font-semibold"
+                                >créer un espace où l'on peut parler de nos
+                                violences, les reconnaître, les comprendre, et
+                                cheminer ensemble vers autre chose</span
+                            >.
+                        </p>
+                        <p>
+                            <span class="font-semibold text-purple-400"
+                                >Ce projet s'inscrit dans la continuité du
+                                travail</span
+                            >
+                            des personnes sexisées et victimes d'oppressions qui
+                            œuvrent depuis toujours à l'éducation des personnes
+                            ayant commis des violences. C'est une manière de
+                            mettre mes privilèges au service des luttes contre
+                            les oppressions systémiques, en créant cet espace de
+                            parole et de transformation collective.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Qui nous cherchons -->
+        <section
+            class="py-16 bg-gradient-to-br from-purple-900/20 to-pink-900/20"
         >
-          <div class="flex items-center justify-between p-4">
-            <div class="text-xl font-black text-orange-500 title-font">
-              Merci pour ton non
-            </div>
-            <button
-              id="close-menu-button"
-              class="p-2 rounded-lg hover:bg-gray-100 transition"
-              aria-label="Fermer le menu"
-            >
-              <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 font-display">
+                        Nous recherchons des témoignages
+                    </h2>
+                    <p class="text-xl text-gray-300">Votre parole compte</p>
+                </div>
 
-          <nav class="flex-1 overflow-y-auto p-6">
-            <ul class="space-y-2">
-              <li>
-                <a
-                  href="#atelier"
-                  class="block text-lg font-medium text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition py-3 px-4"
-                  onclick="closeMobileMenu()"
+                <div
+                    class="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-xl"
                 >
-                  L'atelier
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#temoignages"
-                  class="block text-lg font-medium text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition py-3 px-4"
-                  onclick="closeMobileMenu()"
+                    <p class="text-lg leading-relaxed mb-6">
+                        Nous recherchons des personnes qui ont
+                        <span class="font-semibold text-purple-400"
+                            >vécu ou commis des violences</span
+                        >
+                        et qui souhaitent partager leur expérience dans un cadre
+                        accueillant et bienveillant.
+                    </p>
+                    <ul class="space-y-4 text-lg">
+                        <li class="flex items-start">
+                            <span class="text-purple-400 mr-3 mt-1">✓</span>
+                            <span
+                                >Vous avez subi des violences liées aux systèmes
+                                d'oppression</span
+                            >
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-400 mr-3 mt-1">✓</span>
+                            <span
+                                >Vous avez commis des violences et souhaitez
+                                témoigner de votre parcours</span
+                            >
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-400 mr-3 mt-1">✓</span>
+                            <span
+                                >Vous voulez contribuer à visibiliser ces
+                                réalités souvent tues</span
+                            >
+                        </li>
+                    </ul>
+                    <p class="mt-6 text-gray-300">
+                        Votre témoignage sera traité avec le plus grand respect.
+                        L'anonymat est garanti si vous le souhaitez.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 md:py-24">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div
+                    class="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-8 md:p-12 text-center shadow-2xl"
                 >
-                  Témoignages
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#mission"
-                  class="block text-lg font-medium text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition py-3 px-4"
-                  onclick="closeMobileMenu()"
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 font-display">
+                        Partagez votre histoire
+                    </h2>
+                    <p class="text-xl mb-8 text-gray-100">
+                        Si vous souhaitez témoigner et participer à ce projet,
+                        nous serions honorés de vous accueillir.
+                    </p>
+                    <p class="text-lg mb-10 opacity-90">
+                        Remplissez ce formulaire confidentiel pour nous
+                        contacter :
+                    </p>
+
+                    <!-- Bouton vers le formulaire -->
+                    <a
+                        href="https://cequonneditpas.notion.site/283281bf4e06801c8a1bd891e9ab447b?pvs=105"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-block bg-white text-purple-600 font-bold text-xl px-12 py-6 rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-out transform"
+                    >
+                        Accéder au formulaire de témoignage
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-12 border-t border-gray-700">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <p
+                    class="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-display"
                 >
-                  Notre mission
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#valeurs"
-                  class="block text-lg font-medium text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition py-3 px-4"
-                  onclick="closeMobileMenu()"
-                >
-                  Nos valeurs
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#equipe"
-                  class="block text-lg font-medium text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition py-3 px-4"
-                  onclick="closeMobileMenu()"
-                >
-                  L'équipe
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#faq"
-                  class="block text-lg font-medium text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition py-3 px-4"
-                  onclick="closeMobileMenu()"
-                >
-                  FAQ
-                </a>
-              </li>
-            </ul>
-
-            <!-- CTA in Mobile Menu -->
-            <div class="mt-8">
-              <a
-                href="#events"
-                class="block w-full text-center bg-gradient-to-r from-orange-500 to-purple-600 text-white px-6 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg"
-                onclick="closeMobileMenu()"
-              >
-                Je réserve ma place
-              </a>
-            </div>
-
-            <!-- Social Media Links in Mobile Menu -->
-            <div class="mt-8 pb-4">
-              <p class="text-center text-sm text-gray-500 mb-4">Suivez-nous</p>
-              <div class="flex justify-center space-x-6">
-                <a
-                  href="https://www.instagram.com/mercipourtonnon/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-gray-600 hover:text-orange-500 transition p-2"
-                  aria-label="Instagram"
-                >
-                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12c0 3.403 2.759 6.162 6.162 6.162s6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162-6.162 2.759-6.162 6.162zm8.162 0c0 1.105-.895 2-2 2s-2-.895-2-2 .895-2 2-2 2 .895 2 2zm4.207-6.374c0 .794-.645 1.44-1.44 1.44s-1.44-.646-1.44-1.44.646-1.439 1.44-1.439 1.44.645 1.44 1.439z"
-                    />
-                  </svg>
-                </a>
-
-                <a
-                  href="https://www.facebook.com/mercipourtonnon"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-gray-600 hover:text-blue-600 transition p-2"
-                  aria-label="Facebook"
-                >
-                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-                    />
-                  </svg>
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/company/merci-pour-ton-non"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-gray-600 hover:text-blue-700 transition p-2"
-                  aria-label="LinkedIn"
-                >
-                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                    />
-                  </svg>
-                </a>
-
-                <a
-                  href="https://www.billetweb.fr/pro/mercipourtonnon"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-gray-600 hover:text-orange-500 transition p-2"
-                  aria-label="Billetterie"
-                >
-                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M20 12c0-1.1.9-2 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-1.99.9-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2zm-4.42 4.8L12 14.5l-3.58 2.3 1.08-4.12-3.29-2.69 4.24-.25L12 5.8l1.54 3.95 4.24.25-3.29 2.69 1.09 4.11z"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </div>
-
-      <!-- Hero Section -->
-      <section class="relative z-10 px-4 py-12 sm:px-6 sm:py-20 md:py-32">
-        <div class="max-w-7xl mx-auto">
-          <div class="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-            <div class="text-center lg:text-left">
-              <h1
-                class="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black mb-4 title-font"
-              >
-                <span class="text-orange-500 text-3xl sm:text-4xl md:text-5xl lg:text-7xl">Atelier de</span><br />
-                <span class="text-purple-600 text-3xl sm:text-4xl md:text-5xl lg:text-7xl">Consentement</span><br />
-                <span class="text-gray-900 text-3xl sm:text-4xl md:text-5xl lg:text-7xl">à Strasbourg</span>
-              </h1>
-              <p
-                class="text-base sm:text-xl md:text-2xl text-gray-700 max-w-2xl leading-relaxed fade-in mb-6 sm:mb-8 px-2 sm:px-0"
-              >
-                3 heures pour apprendre à dire non et transformer tes relations
-              </p>
-              <a
-                href="#events"
-                class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
-              >
-                <span>Je réserve ma place (prix libre)</span>
-                <svg
-                  class="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
-              </a>
-              <p class="text-sm text-gray-500 mt-4">
-                Prochaine session le 12 octobre
-              </p>
-            </div>
-            <div class="relative mt-8 lg:mt-0">
-              <div
-                class="bg-gradient-to-br from-orange-100 to-purple-100 rounded-2xl sm:rounded-3xl p-2 sm:p-4 shadow-xl sm:shadow-2xl hover-lift max-w-md sm:max-w-lg lg:max-w-none mx-auto"
-              >
-                <img
-                  src="./assets/atelier_consentement.jpg"
-                  alt="Atelier sur le consentement - Groupe de personnes discutant"
-                  class="w-full h-auto rounded-xl sm:rounded-2xl object-cover"
-                  width="1200"
-                  height="800"
-                  loading="eager"
-                />
-              </div>
-              <div
-                class="absolute -top-4 -right-4 w-16 sm:w-24 h-16 sm:h-24 bg-yellow-300 rounded-full opacity-50 blur-xl hidden sm:block"
-              ></div>
-              <div
-                class="absolute -bottom-4 -left-4 w-20 sm:w-32 h-20 sm:h-32 bg-purple-300 rounded-full opacity-50 blur-xl hidden sm:block"
-              ></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Workshop Details (MOVED UP) -->
-      <section
-        id="atelier"
-        class="relative z-10 px-6 py-16 bg-gradient-to-br from-yellow-50 to-orange-50"
-      >
-        <div class="max-w-7xl mx-auto">
-          <div class="mb-12 text-center">
-            <h2 class="pill-header text-3xl md:text-4xl">
-              UN ATELIER DE CONSENTEMENT QUI CHANGE TOUT
-            </h2><br>
-            <div
-              class="mt-6 inline-flex items-center gap-2 bg-red-100 text-red-700 px-4 py-2 rounded-full font-semibold"
-            >
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
-                />
-              </svg>
-              <span>6 à 15 participants maximum</span>
-            </div>
-          </div>
-
-          <div class="grid md:grid-cols-2 gap-8 mb-12">
-            <div class="bg-white rounded-3xl p-8 shadow-lg">
-              <h3 class="text-2xl font-bold text-orange-500 mb-6">
-                Ce que tu vas vivre
-              </h3>
-              <ul class="space-y-4">
-                <li class="flex items-start gap-3">
-                  <svg
-                    class="w-6 h-6 text-green-500 flex-shrink-0 mt-1"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
-                  <span class="text-gray-700"
-                    >Exercices pratiques et ludiques pour incarner les notions
-                    clés</span
-                  >
-                </li>
-                <li class="flex items-start gap-3">
-                  <svg
-                    class="w-6 h-6 text-green-500 flex-shrink-0 mt-1"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
-                  <span class="text-gray-700"
-                    >Jeux de rôle bienveillants pour t'entraîner à dire
-                    non</span
-                  >
-                </li>
-                <li class="flex items-start gap-3">
-                  <svg
-                    class="w-6 h-6 text-green-500 flex-shrink-0 mt-1"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
-                  <span class="text-gray-700"
-                    >Mises en situation pour comprendre ce qui influence tes
-                    décisions</span
-                  >
-                </li>
-                <li class="flex items-start gap-3">
-                  <svg
-                    class="w-6 h-6 text-green-500 flex-shrink-0 mt-1"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
-                  <span class="text-gray-700"
-                    >Moments de partage dans un cadre sécurisant</span
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <div
-              class="bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl p-8 shadow-lg"
-            >
-              <h3 class="text-2xl font-bold text-purple-600 mb-6">
-                Tu repartiras avec
-              </h3>
-              <ul class="space-y-4">
-                <li class="flex items-start gap-3">
-                  <svg
-                    class="w-6 h-6 text-purple-500 flex-shrink-0 mt-1"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                    />
-                  </svg>
-                  <span class="text-gray-700"
-                    >Une définition claire et mémorisable du consentement</span
-                  >
-                </li>
-                <li class="flex items-start gap-3">
-                  <svg
-                    class="w-6 h-6 text-purple-500 flex-shrink-0 mt-1"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                    />
-                  </svg>
-                  <span class="text-gray-700"
-                    >Des clés concrètes pour repérer les situations
-                    problématiques</span
-                  >
-                </li>
-                <li class="flex items-start gap-3">
-                  <svg
-                    class="w-6 h-6 text-purple-500 flex-shrink-0 mt-1"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                    />
-                  </svg>
-                  <span class="text-gray-700"
-                    >Plus de confiance pour poser tes limites</span
-                  >
-                </li>
-                <li class="flex items-start gap-3">
-                  <svg
-                    class="w-6 h-6 text-purple-500 flex-shrink-0 mt-1"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                    />
-                  </svg>
-                  <span class="text-gray-700"
-                    >Des outils pour des relations plus authentiques</span
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="text-center mt-8">
-            <a
-              href="#events"
-              class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
-            >
-              <span>Rejoindre le prochain atelier</span>
-              <svg
-                class="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M13 7l5 5m0 0l-5 5m5-5H6"
-                />
-              </svg>
-            </a>
-          </div>
-
-          
-          </div>
-        </div>
-      </section>
-
-      <!-- Testimonials (MOVED UP) -->
-      <section id="temoignages" class="relative z-10 px-6 py-16">
-        <div class="max-w-7xl mx-auto">
-          <div class="mb-12 text-center">
-            <h2 class="pill-header pill-purple text-3xl md:text-4xl">
-              ILS ONT PARTICIPÉ À L'ATELIER DE CONSENTEMENT
-            </h2>
-          </div>
-
-          <div class="grid md:grid-cols-2 gap-6">
-            <!-- Testimonial 1 -->
-            <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-l-4 border-purple-500"
-            >
-              <p class="text-gray-700 leading-relaxed italic">
-                "Atelier très intéressant et enrichissant. Le cadre posé a tout de suite été rassurant et bienveillant. Que l'on se sente à l'aise ou non avec les notions de consentement il est très bon de pouvoir participer à ce genre d'atelier afin d'apprendre de nouvelles choses ou de solidifier les acquis !"
-              </p>
-            </div>
-
-            <!-- Testimonial 2 -->
-            <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-l-4 border-yellow-500"
-            >
-              <p class="text-gray-700 leading-relaxed italic">
-                "Cet atelier aurait le mérite d'être proposé en milieu professionnel, en milieu associatif, dans les lycées, dans les facs, sur les sites de rencontres amoureux et amicaux, et partout dans le monde en fait. J'ai encore appris de nouvelles choses sur moi-même et sur les relations interpersonnelles en général. Ça fait grandir et c'est inspirant."
-              </p>
-            </div>
-
-            <!-- Testimonial 3 -->
-            <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-l-4 border-green-500"
-            >
-              <p class="text-gray-700 leading-relaxed italic">
-                "Je recommande cet atelier à tout le monde, que vous ayez déjà des connaissances sur le sujet du consentement (et pas que sexuel) ou non, vous y apprendrez forcément des choses dans un cadre cool et bienveillant ! Je repars avec plein de clés pour m'affirmer et oser dire non."
-              </p>
-            </div>
-
-            <!-- Testimonial 4 -->
-            <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-l-4 border-blue-500"
-            >
-              <p class="text-gray-700 leading-relaxed italic">
-                "Belle expérience enrichissante. Un collectif motivé, engagé et respectueux qui nous a donné la possibilité de réfléchir et de s'exprimer sur une notion complexe et évolutive, souvent mal comprise dans notre société. Je repars avec des questions, des envies de revenir en discuter et des pistes pour améliorer mes propres relations interpersonnelles."
-              </p>
-            </div>
-          </div>
-
-          <div class="text-center mt-8">
-            <a
-              href="#events"
-              class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
-            >
-              <span>Rejoindre le prochain atelier</span>
-              <svg
-                class="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M13 7l5 5m0 0l-5 5m5-5H6"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Mission & Approach -->
-      <section
-        id="mission"
-        class="relative z-10 px-6 py-16 bg-gradient-to-br from-purple-50 to-orange-50"
-      >
-        <div class="max-w-7xl mx-auto">
-          <div class="mb-12 text-center">
-            <h2 class="pill-header text-3xl md:text-4xl">
-              NOTRE MISSION
-            </h2>
-          </div>
-
-          <!-- Mission principale simplifiée -->
-          <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl mb-12 text-center">
-            <p class="text-2xl text-gray-900 font-bold mb-6 leading-relaxed">
-              Diffuser une culture du consentement pour transformer nos relations
-            </p>
-            <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-              On crée des espaces sûrs où chacun·e peut apprendre à dire non, poser ses limites et construire des relations plus authentiques — dans tous les contextes de vie.
-            </p>
-          </div>
-
-          <!-- 3 piliers principaux -->
-          <div class="grid md:grid-cols-3 gap-6 mb-12">
-            <div class="bg-white rounded-2xl p-6 shadow-lg text-center">
-              <div class="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🎯</span>
-              </div>
-              <h3 class="font-bold text-gray-900 mb-3">Apprendre à dire non</h3>
-              <p class="text-gray-600">
-                Écouter ses ressentis, poser ses limites et accueillir le "non" de l'autre avec bienveillance
-              </p>
-            </div>
-
-            <div class="bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl p-6 shadow-lg text-center">
-              <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🌍</span>
-              </div>
-              <h3 class="font-bold text-gray-900 mb-3">Pour tous les contextes</h3>
-              <p class="text-gray-600">
-                Relations amicales, familiales, professionnelles, intimes — le consentement est partout
-              </p>
-            </div>
-
-            <div class="bg-white rounded-2xl p-6 shadow-lg text-center">
-              <div class="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">✊</span>
-              </div>
-              <h3 class="font-bold text-gray-900 mb-3">Un enjeu collectif</h3>
-              <p class="text-gray-600">
-                Issu des luttes féministes, le consentement questionne les rapports de pouvoir dans la société
-              </p>
-            </div>
-          </div>
-
-          <!-- Notre approche -->
-          <div class="mb-12 text-center">
-            <h2 class="pill-header pill-purple text-3xl md:text-4xl">
-              NOTRE APPROCHE
-            </h2>
-          </div>
-
-          <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl">
-            <div class="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 class="text-2xl font-bold text-purple-600 mb-4">
-                  Association à but non lucratif
-                </h3>
-                <p class="text-gray-700 leading-relaxed">
-                  Nos ateliers sont à <strong>prix libre</strong> — personne n'est refusé·e par manque d'argent. On croit que le consentement doit être accessible à tou·te·s.
+                    Ce qu'on ne dit pas
                 </p>
-              </div>
-
-              <div>
-                <h3 class="text-2xl font-bold text-orange-500 mb-4">
-                  Inclusif et accessible
-                </h3>
-                <p class="text-gray-700 leading-relaxed">
-                  On accueille tous les publics dans leur diversité. Nos espaces sont bienveillants et adaptés aux différents vécus et capacités.
+                <p class="text-gray-400">
+                    Un podcast pour libérer la parole sur les violences
                 </p>
-              </div>
+                <p class="mt-6 text-sm text-gray-500">
+                    © 2025 cequonneditpas.fr - Tous droits réservés
+                </p>
             </div>
-          </div>
-        </div>
-      </section>
+        </footer>
 
-      <!-- Our Values -->
-      <section id="valeurs" class="relative z-10 px-6 py-16">
-        <div class="max-w-7xl mx-auto">
-          <div class="mb-12 text-center">
-            <h2 class="pill-header text-3xl md:text-4xl">NOS VALEURS</h2>
-          </div>
-
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-orange-500"
-            >
-              <div class="flex items-center gap-2 mb-3">
-                <span class="text-2xl">💎</span>
-                <h3 class="text-xl font-bold text-gray-900">
-                  Intégrité et clarté
-                </h3>
-              </div>
-              <p class="text-gray-600">
-                On encourage l'écoute de soi, l'alignement entre ce que l'on ressent, ce que l'on pense et ce que l'on dit et une expression sincère et transparente.
-              </p>
-            </div>
-
-            <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-purple-500"
-            >
-              <div class="flex items-center gap-2 mb-3">
-                <span class="text-2xl">🌿</span>
-                <h3 class="text-xl font-bold text-gray-900">
-                  Culture du consentement
-                </h3>
-              </div>
-              <p class="text-gray-600">
-                Le respect des limites, des désaccords et des "non" est une forme élevée de soin et de reconnaissance de l'autre conduisant à des relations plus authentiques.
-              </p>
-            </div>
-
-            <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-yellow-500"
-            >
-              <div class="flex items-center gap-2 mb-3">
-                <span class="text-2xl">🤔</span>
-                <h3 class="text-xl font-bold text-gray-900">
-                  Réflexivité et doute
-                </h3>
-              </div>
-              <p class="text-gray-600">
-                L'examen de nos croyances, automatismes, biais et privilèges est un levier essentiel pour agir de façon plus juste.
-              </p>
-            </div>
-
-            <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-green-500"
-            >
-              <div class="flex items-center gap-2 mb-3">
-                <span class="text-2xl">✨</span>
-                <h3 class="text-xl font-bold text-gray-900">
-                  Accessibilité et inclusion
-                </h3>
-              </div>
-              <p class="text-gray-600">
-                On travaille activement à rendre nos espaces compréhensibles, accessibles et accueillants à la diversité des vécus, des origines et des capacités.
-              </p>
-            </div>
-
-            <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-blue-500"
-            >
-              <div class="flex items-center gap-2 mb-3">
-                <span class="text-2xl">🤝</span>
-                <h3 class="text-xl font-bold text-gray-900">
-                  Responsabilité collective et individuelle
-                </h3>
-              </div>
-              <p class="text-gray-600">
-                Nos choix sont façonnés par nos besoins fondamentaux de liens, des contextes sociaux et des structures de pouvoir qu'on ne peut ignorer, on refuse donc de faire peser l'entière responsabilité sur les individus.
-              </p>
-            </div>
-
-            <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-pink-500"
-            >
-              <div class="flex items-center gap-2 mb-3">
-                <span class="text-2xl">🌈</span>
-                <h3 class="text-xl font-bold text-gray-900">
-                  Gouvernance démocratique
-                </h3>
-              </div>
-              <p class="text-gray-600">
-                On aspire à ce que nos modes d'organisation internes incarnent les principes que l'on défend, entre partage du pouvoir, écoute et co-responsabilité.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Team -->
-      <section
-        id="equipe"
-        class="relative z-10 px-6 py-16 bg-gradient-to-br from-orange-50 to-purple-50"
-      >
-        <div class="max-w-7xl mx-auto">
-          <div class="mb-12 text-center">
-            <h2 class="pill-header text-3xl md:text-4xl">L'ÉQUIPE</h2>
-            <p class="text-xl text-purple-600 font-bold mt-6">
-              Des bénévoles engagé·es pour toi
-            </p>
-          </div>
-
-          <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
-            <!-- Team members simplified -->
-            <div
-              class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
-            >
-              <div
-                class="h-48 bg-gradient-to-br from-orange-100 to-purple-100 flex items-center justify-center"
-              >
-                <img
-                  src="./assets/pictures/elisa.jpg"
-                  alt="Elisa Garcia - Chargée de Communication bénévole chez Merci pour ton non"
-                  class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
-                  width="128"
-                  height="128"
-                  loading="lazy"
-                  onerror="this.style.display='none'"
-                />
-              </div>
-              <div class="p-4 text-center">
-                <h3 class="text-lg font-bold text-gray-900">Elisa Garcia</h3>
-                <p class="text-orange-500 font-semibold">Chargée de communication</p>
-              </div>
-            </div>
-
-            <div
-              class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
-            >
-              <div
-                class="h-48 bg-gradient-to-br from-orange-100 to-purple-100 flex items-center justify-center"
-              >
-                <img
-                  src="./assets/pictures/dilara.jpg"
-                  alt="Dilara Simsek Araiz - Animatrice bénévole chez Merci pour ton non"
-                  class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
-                  width="128"
-                  height="128"
-                  loading="lazy"
-                  onerror="this.style.display='none'"
-                />
-              </div>
-              <div class="p-4 text-center">
-                <h3 class="text-lg font-bold text-gray-900">Dilara Simsek Araiz</h3>
-                <p class="text-orange-500 font-semibold">Chargée de projets solidaires</p>
-              </div>
-            </div>
-
-            <div
-              class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
-            >
-              <div
-                class="h-48 bg-gradient-to-br from-orange-100 to-purple-100 flex items-center justify-center"
-              >
-                <img
-                  src="./assets/pictures/morgane.jpg"
-                  alt="Morgane Bourgeais - Formatrice bénévole chez Merci pour ton non"
-                  class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
-                  width="128"
-                  height="128"
-                  loading="lazy"
-                  onerror="this.style.display='none'"
-                />
-              </div>
-              <div class="p-4 text-center">
-                <h3 class="text-lg font-bold text-gray-900">Morgane Bourgeais</h3>
-                <p class="text-orange-500 font-semibold">Formatrice VHSS</p>
-              </div>
-            </div>
-
-            <div
-              class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
-            >
-              <div
-                class="h-48 bg-gradient-to-br from-orange-100 to-purple-100 flex items-center justify-center"
-              >
-                <img
-                  src="./assets/pictures/mathilde.jpg"
-                  alt="Mathilde Brière - Psychologue bénévole chez Merci pour ton non"
-                  class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
-                  width="128"
-                  height="128"
-                  loading="lazy"
-                  onerror="this.style.display='none'"
-                />
-              </div>
-              <div class="p-4 text-center">
-                <h3 class="text-lg font-bold text-gray-900">Mathilde Brière</h3>
-                <p class="text-orange-500 font-semibold">Psychologue sociale</p>
-              </div>
-            </div>
-
-            <div
-              class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
-            >
-              <div
-                class="h-48 bg-gradient-to-br from-orange-100 to-purple-100 flex items-center justify-center"
-              >
-                <img
-                  src="./assets/pictures/thomas.jpg"
-                  alt="Thomas Jeanneau - Fondateur bénévole chez Merci pour ton non"
-                  class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
-                  width="128"
-                  height="128"
-                  loading="lazy"
-                  onerror="this.style.display='none'"
-                />
-              </div>
-              <div class="p-4 text-center">
-                <h3 class="text-lg font-bold text-gray-900">Thomas Jeanneau</h3>
-                <p class="text-orange-500 font-semibold">Développeur produit</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FAQ (Moved before registration) -->
-      <section id="faq" class="relative z-10 px-6 py-16">
-        <div class="max-w-4xl mx-auto">
-          <div class="mb-12 text-center">
-            <h2 class="pill-header pill-purple text-3xl md:text-4xl">
-              TES QUESTIONS
-            </h2>
-          </div>
-
-          <div class="space-y-4">
-            <details
-              class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
-            >
-              <summary class="font-bold text-lg cursor-pointer text-gray-900">
-                Comment fonctionne le prix libre ?
-              </summary>
-              <p class="mt-4 text-gray-700">
-                Le prix libre signifie que tu donnes ce que tu veux et peux.
-                Tu peux participer sans rien payer si c'est difficile pour toi.
-                Si tu veux et peux soutenir l'association, ta contribution est bienvenue
-                mais jamais obligatoire. Chacun·e participe selon ses moyens.
-              </p>
-            </details>
-
-            <details
-              class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
-            >
-              <summary class="font-bold text-lg cursor-pointer text-gray-900">
-                C'est uniquement sur le consentement sexuel ?
-              </summary>
-              <p class="mt-4 text-gray-700">
-                Non ! L'atelier explore le consentement dans toutes les
-                dimensions : amicales, familiales, professionnelles... Le
-                consentement concerne tous nos rapports humains.
-              </p>
-            </details>
-
-            <details
-              class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
-            >
-              <summary class="font-bold text-lg cursor-pointer text-gray-900">
-                Je suis timide, vais-je devoir parler ?
-              </summary>
-              <p class="mt-4 text-gray-700">
-                Tu restes souverain·e ! Tu peux choisir de ne pas participer à
-                certains exercices, juste observer, ou partir quand tu veux.
-                Tout dans la bienveillance.
-              </p>
-            </details>
-
-            <details
-              class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
-            >
-              <summary class="font-bold text-lg cursor-pointer text-gray-900">
-                Je peux venir seul·e ?
-              </summary>
-              <p class="mt-4 text-gray-700">
-                Bien sûr ! La plupart viennent seul·es. C'est même plus
-                enrichissant pour rencontrer de nouvelles personnes dans un
-                cadre bienveillant.
-              </p>
-            </details>
-
-            <details
-              class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
-            >
-              <summary class="font-bold text-lg cursor-pointer text-gray-900">
-                Je peux annuler ?
-              </summary>
-              <p class="mt-4 text-gray-700">
-                Oui, tu peux annuler à tout moment ! Préviens-nous juste pour
-                libérer ta place (6 à 15 personnes maximum).
-              </p>
-            </details>
-          </div>
-
-          <div class="text-center mt-10">
-            <p class="text-gray-700 mb-4">Une autre question ?</p>
-            <a
-              href="mailto:contact@mercipourtonnon.fr"
-              class="text-orange-500 font-semibold hover:text-purple-600 transition"
-            >
-              Écris-nous : mercipourtonnon@gmail.com
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Events Registration -->
-      <section
-        id="events"
-        class="relative z-10 px-6 py-16 bg-white bg-opacity-50"
-      >
-        <div class="max-w-7xl mx-auto">
-          <div
-            class="bg-gradient-to-br from-orange-500 to-purple-600 rounded-3xl p-8 md:p-12 shadow-2xl text-center"
-          >
-            <h2
-              class="text-4xl md:text-5xl font-black text-white mb-8 title-font"
-            >
-              RÉSERVE TA PLACE MAINTENANT
-            </h2>
-            <p class="text-white text-xl mb-8">
-              ⏰ Prochaine session bientôt !
-            </p>
-            <div class="bg-white rounded-2xl p-6 max-w-4xl mx-auto">
-              <a
-                title="Réservation en ligne"
-                href="https://www.billetweb.fr/multi_event.php?multi=43090"
-                class="shop_frame"
-                target="_blank"
-                data-src="https://www.billetweb.fr/multi_event.php?multi=43090"
-                data-max-width="100%"
-                data-initial-height="600"
-                data-scrolling="no"
-                data-id="43090"
-                data-resize="1"
-                >Réservation en ligne</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Footer with Vision integrated -->
-      <footer class="relative z-10 bg-gray-900 text-white py-12 mt-16">
-        <div class="max-w-7xl mx-auto px-6">
-          <div class="text-center mb-8">
-            <p class="text-2xl font-bold mb-4">MERCI POUR TON NON</p>
-            <p class="text-gray-400">
-              Pour des relations humaines authentiques et respectueuses
-            </p>
-          </div>
-
-          <!-- Social Media Links -->
-          <div class="flex justify-center space-x-6 mb-8">
-            <a
-              href="https://www.instagram.com/mercipourtonnon/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="group"
-              aria-label="Instagram"
-            >
-              <div
-                class="bg-gray-800 p-3 rounded-full transition-all duration-300 group-hover:bg-gradient-to-br group-hover:from-orange-500 group-hover:to-purple-600 group-hover:scale-110"
-              >
-                <svg
-                  class="w-6 h-6 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12c0 3.403 2.759 6.162 6.162 6.162s6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162-6.162 2.759-6.162 6.162zm8.162 0c0 1.105-.895 2-2 2s-2-.895-2-2 .895-2 2-2 2 .895 2 2zm4.207-6.374c0 .794-.645 1.44-1.44 1.44s-1.44-.646-1.44-1.44.646-1.439 1.44-1.439 1.44.645 1.44 1.439z"
-                  />
-                </svg>
-              </div>
-            </a>
-
-            <a
-              href="https://www.facebook.com/mercipourtonnon"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="group"
-              aria-label="Facebook"
-            >
-              <div
-                class="bg-gray-800 p-3 rounded-full transition-all duration-300 group-hover:bg-blue-600 group-hover:scale-110"
-              >
-                <svg
-                  class="w-6 h-6 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-                  />
-                </svg>
-              </div>
-            </a>
-
-            <a
-              href="https://www.linkedin.com/company/merci-pour-ton-non"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="group"
-              aria-label="LinkedIn"
-            >
-              <div
-                class="bg-gray-800 p-3 rounded-full transition-all duration-300 group-hover:bg-blue-700 group-hover:scale-110"
-              >
-                <svg
-                  class="w-6 h-6 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                  />
-                </svg>
-              </div>
-            </a>
-
-            <a
-              href="https://www.billetweb.fr/pro/mercipourtonnon"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="group"
-              aria-label="Billetweb"
-            >
-              <div
-                class="bg-gray-800 p-3 rounded-full transition-all duration-300 group-hover:bg-orange-500 group-hover:scale-110"
-              >
-                <svg
-                  class="w-6 h-6 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M20 12c0-1.1.9-2 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-1.99.9-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2zm-4.42 4.8L12 14.5l-3.58 2.3 1.08-4.12-3.29-2.69 4.24-.25L12 5.8l1.54 3.95 4.24.25-3.29 2.69 1.09 4.11z"
-                  />
-                </svg>
-              </div>
-            </a>
-          </div>
-
-          <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 Merci pour ton non. Tous droits réservés.</p>
-          </div>
-        </div>
-      </footer>
-    </div>
-
-    <!-- Floating CTA Button -->
-    <div id="floating-cta" class="fixed bottom-8 right-8 z-50 hidden">
-      <a
-        href="#events"
-        class="flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-6 py-3 rounded-full font-bold shadow-xl hover:scale-105 transition-transform duration-300"
-      >
-        <span>S'inscrire</span>
-        <svg
-          class="w-5 h-5"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M13 7l5 5m0 0l-5 5m5-5H6"
-          />
-        </svg>
-      </a>
-    </div>
-
-    <script>
-      // Mobile menu functionality
-      const mobileMenuButton = document.getElementById('mobile-menu-button');
-      const closeMenuButton = document.getElementById('close-menu-button');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const menuOverlay = document.getElementById('menu-overlay');
-      const menuSidebar = document.getElementById('menu-sidebar');
-
-      function openMobileMenu() {
-        mobileMenu.classList.remove('hidden');
-        setTimeout(() => {
-          menuSidebar.classList.remove('-translate-x-full');
-        }, 10);
-        mobileMenuButton.setAttribute('aria-expanded', 'true');
-        document.body.style.overflow = 'hidden';
-      }
-
-      function closeMobileMenu() {
-        menuSidebar.classList.add('-translate-x-full');
-        setTimeout(() => {
-          mobileMenu.classList.add('hidden');
-        }, 300);
-        mobileMenuButton.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      }
-
-      if (mobileMenuButton) {
-        mobileMenuButton.addEventListener('click', openMobileMenu);
-      }
-      if (closeMenuButton) {
-        closeMenuButton.addEventListener('click', closeMobileMenu);
-      }
-      if (menuOverlay) {
-        menuOverlay.addEventListener('click', closeMobileMenu);
-      }
-
-      // Close menu on escape key
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('hidden')) {
-          closeMobileMenu();
-        }
-      });
-
-      // Show floating CTA after scrolling past hero section
-      window.addEventListener("scroll", function () {
-        const floatingCta = document.getElementById("floating-cta");
-        const scrollPosition = window.scrollY;
-        const heroHeight = document.querySelector("section").offsetHeight;
-
-        if (scrollPosition > heroHeight) {
-          floatingCta.classList.remove("hidden");
-        } else {
-          floatingCta.classList.add("hidden");
-        }
-      });
-    </script>
-
-    <script>
-      // Workshop dates
-      const workshopDates = [
-        { date: new Date('2025-09-21T10:00:00') },
-        { date: new Date('2025-10-12T10:00:00') },
-        { date: new Date('2025-11-16T10:00:00') },
-        { date: new Date('2025-12-14T10:00:00') },
-        { date: new Date('2026-01-18T10:00:00') },
-        { date: new Date('2026-02-22T10:00:00') }
-      ];
-
-      // Get next workshop date
-      function getNextWorkshop() {
-        const now = new Date();
-        const nextWorkshop = workshopDates.find(w => w.date > now);
-        return nextWorkshop || workshopDates[0]; // Fallback to first date if all passed
-      }
-
-      // Format date for display
-      function formatDate(date) {
-        const options = { day: 'numeric', month: 'long' };
-        return date.toLocaleDateString('fr-FR', options);
-      }
-
-      // Update all date references on page load
-      document.addEventListener('DOMContentLoaded', function() {
-        const nextWorkshop = getNextWorkshop();
-        const formattedDate = formatDate(nextWorkshop.date);
-
-        // Update urgency banner
-        const bannerText = document.querySelector('.bg-gradient-to-r.from-orange-600 p');
-        if (bannerText) {
-          bannerText.innerHTML = `🔥 Prochaine session le ${formattedDate} !
-            <a href="#events" class="underline font-bold ml-2">Je m'inscris →</a>`;
-        }
-
-        // Update hero section date
-        const heroDate = document.querySelector('.text-sm.text-gray-500.mt-4');
-        if (heroDate) {
-          heroDate.textContent = `Prochaine session le ${formattedDate}`;
-        }
-      });
-    </script>
-
-    <script
-      type="text/javascript"
-      src="https://www.billetweb.fr/js/export.js"
-      defer
-    ></script>
-  </body>
+    </body>
 </html>
