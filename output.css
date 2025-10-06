@@ -275,8 +275,14 @@
   .mt-1 {
     margin-top: calc(var(--spacing) * 1);
   }
+  .mt-3 {
+    margin-top: calc(var(--spacing) * 3);
+  }
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
+  }
+  .mt-12 {
+    margin-top: calc(var(--spacing) * 12);
   }
   .mr-3 {
     margin-right: calc(var(--spacing) * 3);
@@ -343,9 +349,6 @@
   }
   .w-32 {
     width: calc(var(--spacing) * 32);
-  }
-  .w-full {
-    width: 100%;
   }
   .max-w-3xl {
     max-width: var(--container-3xl);
