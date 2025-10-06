@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=2048, height=1152" />
+        <title>Bannière - Ce qu'on ne dit pas</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                width: 2048px;
+                height: 1152px;
+                background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                overflow: hidden;
+                font-family: "Inter", sans-serif;
+            }
+
+            /* Accent gradient overlay */
+            body::before {
+                content: "";
+                position: absolute;
+                top: -50%;
+                right: -20%;
+                width: 150%;
+                height: 200%;
+                background: radial-gradient(
+                    ellipse at center,
+                    rgba(147, 51, 234, 0.15) 0%,
+                    transparent 60%
+                );
+                pointer-events: none;
+            }
+
+            /* Subtle pattern overlay */
+            body::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image: repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 35px,
+                    rgba(255, 255, 255, 0.01) 35px,
+                    rgba(255, 255, 255, 0.01) 70px
+                );
+                pointer-events: none;
+            }
+
+            /* Sound waves decoration */
+            .sound-waves {
+                position: absolute;
+                left: 5%;
+                top: 50%;
+                transform: translateY(-50%);
+                opacity: 0.08;
+            }
+
+            .wave-circle {
+                position: absolute;
+                border: 3px solid;
+                border-radius: 50%;
+                border-color: linear-gradient(90deg, #a855f7, #ec4899);
+                animation: pulse 4s ease-out infinite;
+            }
+
+            .wave-circle:nth-child(1) {
+                width: 150px;
+                height: 150px;
+                border-color: #a855f7;
+                animation-delay: 0s;
+            }
+
+            .wave-circle:nth-child(2) {
+                width: 250px;
+                height: 250px;
+                left: -50px;
+                top: -50px;
+                border-color: #c084fc;
+                animation-delay: 0.5s;
+            }
+
+            .wave-circle:nth-child(3) {
+                width: 350px;
+                height: 350px;
+                left: -100px;
+                top: -100px;
+                border-color: #e9d5ff;
+                animation-delay: 1s;
+            }
+
+            @keyframes pulse {
+                0% {
+                    opacity: 0.15;
+                    transform: scale(0.8);
+                }
+                50% {
+                    opacity: 0.05;
+                }
+                100% {
+                    opacity: 0;
+                    transform: scale(1.2);
+                }
+            }
+
+            /* Main content container */
+            .content {
+                position: relative;
+                z-index: 10;
+                text-align: center;
+                padding: 0 100px;
+                max-width: 1200px;
+            }
+
+            /* Main title */
+            .title {
+                font-family: "Playfair Display", serif;
+                font-size: 72px;
+                font-weight: 900;
+                line-height: 1.1;
+                color: transparent;
+                background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                margin-bottom: 36px;
+                letter-spacing: -1px;
+                text-shadow: 0 0 80px rgba(168, 85, 247, 0.3);
+            }
+
+            /* Subtitle */
+            .subtitle {
+                font-family: "Inter", sans-serif;
+                font-size: 36px;
+                font-weight: 300;
+                color: #e5e7eb;
+                line-height: 1.3;
+                opacity: 0.95;
+                letter-spacing: -0.5px;
+            }
+
+            /* Decorative element */
+            .accent-bar {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 8px;
+                height: 400px;
+                background: linear-gradient(
+                    180deg,
+                    transparent,
+                    #a855f7,
+                    #ec4899,
+                    transparent
+                );
+                opacity: 0.6;
+            }
+
+            /* Logo hint (subtle) */
+            .logo-hint {
+                position: absolute;
+                bottom: 80px;
+                left: 100px;
+                font-family: "Playfair Display", serif;
+                font-size: 36px;
+                font-weight: 700;
+                color: transparent;
+                background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                opacity: 0.3;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Sound waves decoration -->
+        <div class="sound-waves">
+            <div class="wave-circle"></div>
+            <div class="wave-circle"></div>
+            <div class="wave-circle"></div>
+        </div>
+
+        <!-- Main content -->
+        <div class="content">
+            <h1 class="title">
+                Récits intimes de violences<br />
+                commises et subies
+            </h1>
+            <p class="subtitle">Parce que la violence se vit des deux côtés</p>
+        </div>
+
+        <!-- Decorative accent bar -->
+        <div class="accent-bar"></div>
+    </body>
+</html>
