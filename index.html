@@ -16,6 +16,9 @@
         <meta name="author" content="Ce qu'on ne dit pas" />
         <meta name="language" content="fr" />
         <meta name="revisit-after" content="7 days" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="geo.region" content="FR" />
+        <link rel="alternate" hreflang="fr" href="https://cequonneditpas.fr/" />
 
         <!-- Favicons -->
         <link
@@ -78,6 +81,10 @@
             rel="stylesheet"
         />
 
+        <!-- Resource Hints for Performance -->
+        <link rel="dns-prefetch" href="https://plausible.io" />
+        <link rel="dns-prefetch" href="https://unpkg.com" />
+
         <link rel="stylesheet" href="output.css" />
         <link rel="canonical" href="https://cequonneditpas.fr/" />
 
@@ -96,7 +103,99 @@
         </script>
 
         <!-- Lucide Icons -->
-        <script src="https://unpkg.com/lucide@latest"></script>
+        <script src="https://unpkg.com/lucide@0.263.1"></script>
+
+        <!-- Structured Data (JSON-LD) -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Ce qu'on ne dit pas",
+            "alternateName": "Ce qu'on ne dit pas - Podcast",
+            "url": "https://cequonneditpas.fr/",
+            "description": "Récits intimes de violences commises et subies. Parce que la violence se vit des deux côtés. Un podcast où des personnes témoignent de leur vécu.",
+            "inLanguage": "fr-FR",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Ce qu'on ne dit pas",
+                "url": "https://cequonneditpas.fr/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://cequonneditpas.fr/public/logo.png",
+                    "width": 512,
+                    "height": 512
+                },
+                "sameAs": [
+                    "https://www.youtube.com/@cequonneditpas.podcast",
+                    "https://www.linkedin.com/company/cequonneditpas-podcast",
+                    "https://www.facebook.com/cequonneditpas.podcast",
+                    "https://www.instagram.com/cequonneditpas.podcast"
+                ],
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "email": "cequonneditpaspodcast@gmail.com",
+                    "contactType": "customer service",
+                    "availableLanguage": ["French"]
+                }
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "https://cequonneditpas.fr/#voix"
+                },
+                "query-input": "required name=search_term_string"
+            }
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "PodcastSeries",
+            "name": "Ce qu'on ne dit pas",
+            "description": "Récits intimes de violences commises et subies. Un podcast qui explore les violences dans notre société à travers les témoignages personnels.",
+            "url": "https://cequonneditpas.fr/",
+            "inLanguage": "fr-FR",
+            "genre": ["Society & Culture", "Personal Stories"],
+            "author": {
+                "@type": "Person",
+                "name": "Tom",
+                "description": "Créateur du podcast Ce qu'on ne dit pas"
+            }
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Quel est le format des entretiens ?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Les entretiens sont guidés selon les sujets et violences dont vous souhaitez parler. Ils peuvent durer de 30 minutes à 2 heures selon les différents sujets abordés. Les interviews s'enregistrent en physique pour l'instant."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Quels sont mes droits en tant que témoignant ?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Vous avez aucune obligation de diffusion - vous décidez. Vous avez un droit de regard complet sur ce qui est enregistré et ce qui sortira. Vous pouvez couper ou supprimer l'épisode à votre demande. L'anonymat est garanti si vous le souhaitez."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Quand sera lancé le podcast ?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Le podcast sera diffusé quand une première douzaine d'épisodes auront été enregistrés pour constituer la première saison."
+                    }
+                }
+            ]
+        }
+        </script>
     </head>
     <body
         class="bg-gradient-to-br from-gray-900 to-gray-800 text-gray-100 min-h-screen font-body"
@@ -225,6 +324,8 @@
                     <img
                         src="./public/logo.png"
                         alt="Ce qu'on ne dit pas - Logo"
+                        width="512"
+                        height="512"
                         class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto mb-8 rounded-2xl shadow-2xl"
                     />
                     <h1
@@ -1007,6 +1108,9 @@
                         <img
                             src="./public/logo.png"
                             alt="Ce qu'on ne dit pas - Logo"
+                            width="512"
+                            height="512"
+                            loading="lazy"
                             class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl shadow-lg flex-shrink-0"
                         />
                         <div>
