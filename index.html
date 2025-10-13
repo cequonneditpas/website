@@ -103,7 +103,7 @@
         </script>
 
         <!-- Lucide Icons -->
-        <script src="https://unpkg.com/lucide@0.263.1"></script>
+        <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
         <!-- Structured Data (JSON-LD) -->
         <script type="application/ld+json">
@@ -1311,8 +1311,17 @@
             // Update on load
             updateActiveNav();
 
-            // Initialize Lucide icons
-            lucide.createIcons();
+            // Initialize Lucide icons after ensuring script is loaded
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            } else {
+                // Fallback: wait for script to load
+                window.addEventListener('load', function() {
+                    if (typeof lucide !== 'undefined') {
+                        lucide.createIcons();
+                    }
+                });
+            }
         </script>
     </body>
 </html>
