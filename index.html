@@ -16,6 +16,9 @@
         <meta name="author" content="Ce qu'on ne dit pas" />
         <meta name="language" content="fr" />
         <meta name="revisit-after" content="7 days" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="geo.region" content="FR" />
+        <link rel="alternate" hreflang="fr" href="https://cequonneditpas.fr/" />
 
         <!-- Favicons -->
         <link
@@ -78,6 +81,10 @@
             rel="stylesheet"
         />
 
+        <!-- Resource Hints for Performance -->
+        <link rel="dns-prefetch" href="https://plausible.io" />
+        <link rel="dns-prefetch" href="https://unpkg.com" />
+
         <link rel="stylesheet" href="output.css" />
         <link rel="canonical" href="https://cequonneditpas.fr/" />
 
@@ -87,6 +94,108 @@
         <!-- Security -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="referrer" content="no-referrer-when-downgrade" />
+
+        <!-- Privacy-friendly analytics by Plausible -->
+        <script async src="https://plausible.io/js/pa-KygWU4dWpSo_ufjWNw9P4.js"></script>
+        <script>
+            window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+            plausible.init()
+        </script>
+
+        <!-- Lucide Icons -->
+        <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+        <!-- Structured Data (JSON-LD) -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Ce qu'on ne dit pas",
+            "alternateName": "Ce qu'on ne dit pas - Podcast",
+            "url": "https://cequonneditpas.fr/",
+            "description": "Récits intimes de violences commises et subies. Parce que la violence se vit des deux côtés. Un podcast où des personnes témoignent de leur vécu.",
+            "inLanguage": "fr-FR",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Ce qu'on ne dit pas",
+                "url": "https://cequonneditpas.fr/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://cequonneditpas.fr/public/logo.png",
+                    "width": 512,
+                    "height": 512
+                },
+                "sameAs": [
+                    "https://www.youtube.com/@cequonneditpas.podcast",
+                    "https://www.linkedin.com/company/cequonneditpas-podcast",
+                    "https://www.facebook.com/cequonneditpas.podcast",
+                    "https://www.instagram.com/cequonneditpas.podcast"
+                ],
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "email": "cequonneditpaspodcast@gmail.com",
+                    "contactType": "customer service",
+                    "availableLanguage": ["French"]
+                }
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "https://cequonneditpas.fr/#voix"
+                },
+                "query-input": "required name=search_term_string"
+            }
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "PodcastSeries",
+            "name": "Ce qu'on ne dit pas",
+            "description": "Récits intimes de violences commises et subies. Un podcast qui explore les violences dans notre société à travers les témoignages personnels.",
+            "url": "https://cequonneditpas.fr/",
+            "inLanguage": "fr-FR",
+            "genre": ["Society & Culture", "Personal Stories"],
+            "author": {
+                "@type": "Person",
+                "name": "Tom",
+                "description": "Créateur du podcast Ce qu'on ne dit pas"
+            }
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Quel est le format des entretiens ?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Les entretiens sont guidés selon les sujets et violences dont vous souhaitez parler. Ils peuvent durer de 30 minutes à 2 heures selon les différents sujets abordés. Les interviews s'enregistrent en physique pour l'instant."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Quels sont mes droits en tant que témoignant ?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Vous avez aucune obligation de diffusion - vous décidez. Vous avez un droit de regard complet sur ce qui est enregistré et ce qui sortira. Vous pouvez couper ou supprimer l'épisode à votre demande. L'anonymat est garanti si vous le souhaitez."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Quand sera lancé le podcast ?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Le podcast sera diffusé quand une première douzaine d'épisodes auront été enregistrés pour constituer la première saison."
+                    }
+                }
+            ]
+        }
+        </script>
     </head>
     <body
         class="bg-gradient-to-br from-gray-900 to-gray-800 text-gray-100 min-h-screen font-body"
@@ -112,27 +221,31 @@
                         <div class="ml-10 flex items-baseline space-x-4">
                             <a
                                 href="#demarche"
-                                class="text-gray-300 hover:text-purple-400 px-3 py-2 text-sm font-medium transition-colors"
+                                class="nav-link text-gray-300 hover:text-purple-400 px-3 py-2 text-sm font-medium transition-colors"
+                                data-section="demarche"
                             >
                                 La démarche du podcast
                             </a>
                             <a
                                 href="#voix"
-                                class="text-gray-300 hover:text-purple-400 px-3 py-2 text-sm font-medium transition-colors"
+                                class="nav-link text-gray-300 hover:text-purple-400 px-3 py-2 text-sm font-medium transition-colors"
+                                data-section="voix"
                             >
                                 Extraits de témoignages
                             </a>
                             <a
                                 href="#auteur"
-                                class="text-gray-300 hover:text-purple-400 px-3 py-2 text-sm font-medium transition-colors"
+                                class="nav-link text-gray-300 hover:text-purple-400 px-3 py-2 text-sm font-medium transition-colors"
+                                data-section="auteur"
                             >
                                 Qui suis-je
                             </a>
                             <a
                                 href="#contact"
-                                class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full text-sm font-semibold transition-colors"
+                                class="group relative bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold overflow-hidden"
                             >
-                                Témoigner
+                                <span class="absolute inset-0 bg-purple-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"></span>
+                                <span class="relative">Témoigner</span>
                             </a>
                         </div>
                     </div>
@@ -171,27 +284,31 @@
                 >
                     <a
                         href="#demarche"
-                        class="text-gray-300 hover:text-purple-400 block px-3 py-2 text-base font-medium"
+                        class="nav-link text-gray-300 hover:text-purple-400 block px-3 py-2 text-base font-medium"
+                        data-section="demarche"
                     >
                         La démarche du podcast
                     </a>
                     <a
                         href="#voix"
-                        class="text-gray-300 hover:text-purple-400 block px-3 py-2 text-base font-medium"
+                        class="nav-link text-gray-300 hover:text-purple-400 block px-3 py-2 text-base font-medium"
+                        data-section="voix"
                     >
                         Extraits de témoignages
                     </a>
                     <a
                         href="#auteur"
-                        class="text-gray-300 hover:text-purple-400 block px-3 py-2 text-base font-medium"
+                        class="nav-link text-gray-300 hover:text-purple-400 block px-3 py-2 text-base font-medium"
+                        data-section="auteur"
                     >
                         Qui suis-je
                     </a>
                     <a
                         href="#contact"
-                        class="bg-purple-600 hover:bg-purple-700 text-white block px-3 py-2 mx-3 rounded-full text-base font-semibold text-center"
+                        class="group relative bg-purple-600 text-white block px-3 py-2 mx-3 rounded-full text-base font-semibold text-center overflow-hidden"
                     >
-                        Témoigner
+                        <span class="absolute inset-0 bg-purple-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"></span>
+                        <span class="relative">Témoigner</span>
                     </a>
                 </div>
             </div>
@@ -207,6 +324,8 @@
                     <img
                         src="./public/logo.png"
                         alt="Ce qu'on ne dit pas - Logo"
+                        width="512"
+                        height="512"
                         class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto mb-8 rounded-2xl shadow-2xl"
                     />
                     <h1
@@ -221,9 +340,10 @@
                     </p>
                     <a
                         href="#demarche"
-                        class="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-lg px-8 py-4 rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-out transform"
+                        class="group relative inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-lg px-8 py-4 rounded-full shadow-xl overflow-hidden"
                     >
-                        Découvrir le podcast
+                        <span class="absolute inset-0 bg-gradient-to-r from-purple-700 to-pink-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"></span>
+                        <span class="relative">Découvrir le podcast</span>
                     </a>
                 </div>
             </div>
@@ -368,7 +488,9 @@
                     <div
                         class="bg-purple-900 bg-opacity-30 rounded-xl p-6 border border-purple-500 border-opacity-20 hover:shadow-lg transition-all duration-300"
                     >
-                        <div class="text-4xl mb-4">🌱</div>
+                        <div class="mb-4 text-purple-400">
+                            <i data-lucide="sprout" class="w-10 h-10"></i>
+                        </div>
                         <h3 class="text-xl font-semibold mb-3 text-purple-300">
                             On ne naît pas violent·e
                         </h3>
@@ -381,7 +503,9 @@
                     <div
                         class="bg-purple-900 bg-opacity-30 rounded-xl p-6 border border-purple-500 border-opacity-20 hover:shadow-lg transition-all duration-300"
                     >
-                        <div class="text-4xl mb-4">🎧</div>
+                        <div class="mb-4 text-purple-400">
+                            <i data-lucide="headphones" class="w-10 h-10"></i>
+                        </div>
                         <h3 class="text-xl font-semibold mb-3 text-purple-300">
                             Écouter pour comprendre
                         </h3>
@@ -395,7 +519,9 @@
                     <div
                         class="bg-purple-900 bg-opacity-30 rounded-xl p-6 border border-purple-500 border-opacity-20 hover:shadow-lg transition-all duration-300"
                     >
-                        <div class="text-4xl mb-4">🤝</div>
+                        <div class="mb-4 text-purple-400">
+                            <i data-lucide="handshake" class="w-10 h-10"></i>
+                        </div>
                         <h3 class="text-xl font-semibold mb-3 text-purple-300">
                             De l'écoute à la transformation
                         </h3>
@@ -646,8 +772,9 @@
                     <div
                         class="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6"
                     >
-                        <h3 class="text-xl font-semibold mb-3 text-purple-300">
-                            📍 Format des entretiens
+                        <h3 class="text-xl font-semibold mb-3 text-purple-300 flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            Format des entretiens
                         </h3>
                         <p class="text-gray-300">
                             Les entretiens sont guidés selon les sujets et
@@ -667,8 +794,9 @@
                     <div
                         class="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6"
                     >
-                        <h3 class="text-xl font-semibold mb-3 text-purple-300">
-                            📞 Le processus étape par étape
+                        <h3 class="text-xl font-semibold mb-3 text-purple-300 flex items-center gap-2">
+                            <i data-lucide="phone" class="w-5 h-5"></i>
+                            Le processus étape par étape
                         </h3>
                         <div class="space-y-3 text-gray-300">
                             <p>
@@ -713,8 +841,9 @@
                     <div
                         class="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6"
                     >
-                        <h3 class="text-xl font-semibold mb-3 text-purple-300">
-                            🛡️ Vos droits et votre protection
+                        <h3 class="text-xl font-semibold mb-3 text-purple-300 flex items-center gap-2">
+                            <i data-lucide="shield" class="w-5 h-5"></i>
+                            Vos droits et votre protection
                         </h3>
                         <div class="space-y-2 text-gray-300">
                             <p>
@@ -752,8 +881,9 @@
                     <div
                         class="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6"
                     >
-                        <h3 class="text-xl font-semibold mb-3 text-purple-300">
-                            📅 Lancement du podcast
+                        <h3 class="text-xl font-semibold mb-3 text-purple-300 flex items-center gap-2">
+                            <i data-lucide="calendar" class="w-5 h-5"></i>
+                            Lancement du podcast
                         </h3>
                         <p class="text-gray-300">
                             Le podcast sera diffusé quand une
@@ -940,9 +1070,10 @@
                         href="https://cequonneditpas.notion.site/283281bf4e06801c8a1bd891e9ab447b?pvs=105"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="inline-block bg-white text-purple-600 font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-6 rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-out transform"
+                        class="group relative inline-block bg-white text-purple-600 font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-6 rounded-full shadow-xl overflow-hidden"
                     >
-                        Accéder au formulaire de témoignage
+                        <span class="absolute inset-0 bg-gray-100 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"></span>
+                        <span class="relative">Accéder au formulaire de témoignage</span>
                     </a>
 
                     <div
@@ -977,6 +1108,9 @@
                         <img
                             src="./public/logo.png"
                             alt="Ce qu'on ne dit pas - Logo"
+                            width="512"
+                            height="512"
+                            loading="lazy"
                             class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl shadow-lg flex-shrink-0"
                         />
                         <div>
@@ -1103,7 +1237,7 @@
             </div>
         </footer>
 
-        <!-- Smooth scroll script -->
+        <!-- Smooth scroll and scroll spy script -->
         <script>
             // Smooth scrolling for navigation links
             document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -1140,6 +1274,54 @@
                     }
                 });
             });
+
+            // Scroll spy functionality
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const navbarHeight = 64;
+
+            function updateActiveNav() {
+                const scrollPosition = window.scrollY + navbarHeight + 100;
+
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        // Remove active class from all links
+                        navLinks.forEach((link) => {
+                            link.classList.remove('text-purple-400');
+                            link.classList.add('text-gray-300');
+                        });
+
+                        // Add active class to current section links
+                        const activeLinks = document.querySelectorAll(`[data-section="${sectionId}"]`);
+                        activeLinks.forEach((link) => {
+                            link.classList.remove('text-gray-300');
+                            link.classList.add('text-purple-400');
+                        });
+                    }
+                });
+            }
+
+            // Update on scroll
+            window.addEventListener('scroll', updateActiveNav);
+
+            // Update on load
+            updateActiveNav();
+
+            // Initialize Lucide icons after ensuring script is loaded
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            } else {
+                // Fallback: wait for script to load
+                window.addEventListener('load', function() {
+                    if (typeof lucide !== 'undefined') {
+                        lucide.createIcons();
+                    }
+                });
+            }
         </script>
     </body>
 </html>
