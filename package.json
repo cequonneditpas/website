@@ -2,7 +2,7 @@
   "name": "cequonneditpas",
   "private": true,
   "devDependencies": {
-    "@tailwindcss/cli": "^4.1.16",
+    "@tailwindcss/cli": "^4.1.17",
     "@types/bun": "latest",
     "tailwindcss": "^4.1.16"
   },
